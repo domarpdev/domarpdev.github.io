@@ -1,0 +1,58 @@
+html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+body  {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+    display: table;
+}
+
+
+.wrapper{
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+
+
+path {
+    stroke: #ffffff;
+    fill: #ffffff;
+    stroke-dasharray: 1600;
+    opacity: 1;
+    animation: animate 5s cubic-bezier(0.2, 0.6, 0.8, 0.1);
+}
+
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        fill: none;
+        stroke-dashoffset: 1600;
+    }
+
+    30% {
+        opacity: 1;
+        fill: none;
+        stroke-dashoffset: 1600;
+    }
+
+    90% {
+        fill: rgba(255, 255, 255, 0)
+    }
+
+    100% {
+        opacity: 1;
+        fill: rgba(255, 255, 255, 1);
+        stroke-dashoffset: 0;
+    }
+}
