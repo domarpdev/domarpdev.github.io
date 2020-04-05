@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<di id="app">
+	<div id="app">
 		<v-app>
 			<v-app-bar app color="#4C8BF4" dark elevate-on-scroll scroll-target="#profile-div">
 				<v-toolbar-title style="margin-left: 5%; font-weight: 300; font-size: x-large; letter-spacing: 1px;">
@@ -39,7 +39,7 @@
 					<div style="font-size: 16px;">Spacecraft Checkout Engineer & Full Stack Developer</div>
 					<v-btn class="ma-2" href="assets/CV.pdf" color="success">
 						DOWNLOAD CV <v-icon right>mdi-download</v-icon>
-					  </v-btn>
+					</v-btn>
 				</div>
 
 				<div align="center" style="margin: 30px 30%;">
@@ -65,7 +65,7 @@
 				</div>
 
 				<v-divider></v-divider>
-				
+
 			</v-content>
 
 			<v-footer app>
@@ -84,41 +84,9 @@
 		new Vue({
 			el: '#app',
 			vuetify: new Vuetify(),
-			data: () => ({
-				drawer: null,
-				years: [
-					{
-						color: 'cyan',
-						year: '1995',
-						title: 'Born',
-						description: 'Born on 28th August 1995'
-					},
-					{
-						color: 'green',
-						year: '2000 - 2010',
-						title: 'Primary Education',
-						description: 'Schooling at Gautam High School, Proddatur'
-					},
-					{
-						color: 'pink',
-						year: '2010 - 2012',
-						title: 'Secondary Education',
-						description: 'Intermediate Education at Sri Gayatri junior College, Hyderabad'
-					},
-					{
-						color: 'orange',
-						year: '2012 - 2016',
-						title: 'Engineering',
-						description: 'B-Tech in Avionics, Indian Institute of Space Science and Technology'
-					},
-					{
-						color: 'purple',
-						year: '2016 - present',
-						title: 'Job',
-						description: 'Working as Scientist/Engineer-"SC", U.R. Rao Satellite Centre, ISRO'
-					},
-				],
-			})
+			data: {
+				drawer: null
+			}
 		})
 	</script>
 </body>
