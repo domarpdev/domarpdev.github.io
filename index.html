@@ -66,23 +66,6 @@
 
 				<v-divider></v-divider>
 				
-				<div align="center" style="padding: 30px 5%; background-color: #FAFAFA">
-					<div style="letter-spacing: 2px; font-weight: 500; margin: 10px 0;">JOURNEY</div>
-					<v-timeline>
-						<v-timeline-item v-for="(year, i) in years" :key="i" :color="year.color" small>
-							<template v-slot:opposite>
-								<h3 :class="`font-weight-bold ${year.color}--text`"
-									v-text="year.year"></span>
-							</template>
-							<v-card class="elevation-5">
-								<v-card-title :class="`font-weight-light mb-4 ${year.color}--text`">{{year.title}}</v-card-title>
-								<v-card-text style="font-size: 16px;">
-									{{year.description}}
-								</v-card-text>
-							</v-card>
-						</v-timeline-item>
-					</v-timeline>
-				</v-carddcdiv>
 			</v-content>
 
 			<v-footer app>
