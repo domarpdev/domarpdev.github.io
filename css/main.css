@@ -6,3 +6,8 @@
     padding: 15px 10px;
     letter-spacing: 1px;
 }
+
+.hero {
+    font-size: 24px;
+    font-weight: 400;
+}
