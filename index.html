@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html style="overflow: auto;">
 
-<head>
+<head lang="en">
+	<title>Pramod Devireddy</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Pramod Devireddy Portfolio Website. ISRO" />
+	<link rel="icon" type="image/ico" href="./assets/icon.png">
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162038753-2"></script>
 	<script>
@@ -23,14 +28,25 @@
 		})(window, document, 'script', 'dataLayer', 'GTM-5L9XPM9');</script>
 	<!-- End Google Tag Manager -->
 
-	<title>Pramod Devireddy</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
 
 	<link rel="stylesheet" href="css/main.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 	<meta name="google-site-verification" content="f2T4HC4YSuFVyrK6e6DWxpmYky4Btfl2qgvoyWDJl3s" />
+
+	<meta property="og:title" content="Pramod Devireddy portfolio">
+	<meta property="og:site_name" content="Pramod Devireddy">
+	<meta property="og:url" content="https://domarpdev.github.io/">
+	<meta property="og:description" content="Pramod Devireddy's portfolio">
+	<meta property="og:type" content="site">
+	<meta property="twitter:site" content="@PramodDevireddy">
+	<meta property="twitter:title" content="Pramod Devireddy portfolio">
+	<meta property="twitter:description" content="Pramod Devireddy Portfolio Website. ISRO">
+	<meta property="twitter:creator" content="@PramodDevireddy">
+	<meta property="twitter:account_id" content="1854288366">
 
 </head>
 
@@ -41,36 +57,34 @@
 	<!-- End Google Tag Manager (noscript) -->
 	<div id="app">
 		<v-app>
-			<v-app-bar app color="#4C8BF4" dark elevate-on-scroll scroll-target="#profile-div">
+			<v-app-bar app flat color="#4C8BF4" dark>
 				<v-toolbar-title style="margin-left: 5%; font-weight: 300; font-size: x-large; letter-spacing: 1px;">
 					<h1 class="hero">Pramod Devireddy</h1>
 				</v-toolbar-title>
 				<v-spacer></v-spacer>
 				<div>
 					<v-chip class="ma-2" outlined link>Skills</v-chip>
-					<v-chip class="ma-2" outlined link>Journey</v-chip>
 					<v-chip class="ma-2" outlined link>Projects</v-chip>
 					<v-chip class="ma-2" outlined link>Contact</v-chip>
 				</div>
 			</v-app-bar>
 
 			<v-content>
-				<div id="profile-div" class="profile elevation-5" align="center">
+				<div class="profile elevation-5" align="center">
 					<v-avatar class="elevation-20" size="150">
-						<img src="https://avatars0.githubusercontent.com/u/11692549?s=400&u=8e8770d75c63b83ce4cd751ff64c981ca675ba2f&v=4"
-							alt="Pramod">
+						<img src="./assets/pramod-devireddy.jpg" alt="Pramod Devireddy">
 					</v-avatar>
 					<div style="font-weight: 400; letter-spacing: 8px; margin: 5px 0;">PRAMOD DEVIREDDY</div>
 					<div style="font-size: 16px; color: rgb(240, 240, 240);">Scientist/Engineer - SC, <b>ISRO</b>🚀
 						(2016 -
 						present)</div>
 					<div style="font-size: 16px;">Spacecraft Checkout Engineer & Full Stack Developer</div>
-					<v-btn class="ma-2" href="assets/CV.pdf" color="success">
+					<v-btn class="ma-2" href="./assets/Pramod-Devireddy-CV.pdf" color="success">
 						DOWNLOAD CV <v-icon right>mdi-download</v-icon>
 					</v-btn>
 				</div>
 
-				<div align="center" style="margin: 30px 30%;">
+				<div align="center" style="margin: 30px 15%;">
 					<div style="letter-spacing: 2px; font-weight: 500; margin: 10px 0;">SKILLS</div>
 					<v-chip class="ma-2">C</v-chip>
 					<v-chip class="ma-2">C++</v-chip>
@@ -97,11 +111,22 @@
 			</v-content>
 
 			<v-footer app>
+				<v-spacer></v-spacer>
 				<div class="mx-auto">
 					<span style="font-size: 16px; font-weight: 300; letter-spacing: 1px; line-height: 36px;">
 						&copy; 2020 - Present Pramod Devireddy
 					</span>
 				</div>
+				<v-spacer></v-spacer>
+				<v-btn class="mx-2" icon color="#0077BF" target="_blank" href="https://www.linkedin.com/in/pramod-devireddy/">
+					<v-icon>fab fa-linkedin</v-icon>
+				</v-btn>
+				<v-btn class="mx-2" icon color="black" target="_blank" href="https://github.com/Pramod-Devireddy">
+					<v-icon>fab fa-github</v-icon>
+				</v-btn>
+				<v-btn class="mx-2" icon color="#1A91DA" target="_blank" href="https://www.linkedin.com/in/pramod-devireddy/">
+					<v-icon>fab fa-twitter</v-icon>
+				</v-btn>
 			</v-footer>
 		</v-app>
 	</div>
