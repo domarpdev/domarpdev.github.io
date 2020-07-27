@@ -1,0 +1,15 @@
+{
+    "name": "Pramod Devireddy",
+    "short_name": "domarpdev",
+    "theme_color": "#4C8BF4",
+    "icons": [
+        {
+            "src": "./img/icon.png",
+            "sizes": "360x360",
+            "type": "image/png"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#000000"
+}
