@@ -1,7 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ea88d019a0228f84a90d",
-    "url": "/css/app.cc1b590e.css"
+    "revision": "1241fe92f5e09ca7917784edcf7ec81b",
+    "url": "/Pramod-Devireddy-CV.pdf"
+  },
+  {
+    "revision": "644130f3567eab5575f2",
+    "url": "/css/app.274047d2.css"
   },
   {
     "revision": "463605c97a4f1434ed4c",
@@ -20,12 +24,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/pramod-devireddy.jpg"
   },
   {
-    "revision": "1daf830fab5c63be13378ea7f04a0441",
+    "revision": "723efbf365be4d614d1b0adbb973d9b3",
     "url": "/index.html"
   },
   {
-    "revision": "ea88d019a0228f84a90d",
-    "url": "/js/app.408aaffd.js"
+    "revision": "644130f3567eab5575f2",
+    "url": "/js/app.e16c57dd.js"
   },
   {
     "revision": "463605c97a4f1434ed4c",

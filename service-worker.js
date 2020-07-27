@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.6956bca74e74272b45512e13abc7a9c3.js"
+  "/precache-manifest.9364e3806473d62814b49d2bf98b7043.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "domarpdev.github.io"});
