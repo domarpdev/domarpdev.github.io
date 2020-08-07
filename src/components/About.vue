@@ -4,14 +4,13 @@
       <v-avatar class="elevation-20" size="150">
         <img src="../../public/img/pramod-devireddy.jpg" alt="Pramod Devireddy" />
       </v-avatar>
-      <div style="font-weight: 400; letter-spacing: 8px; margin: 5px 0;">PRAMOD DEVIREDDY</div>
-      <div style="font-size: 16px; color: rgb(240, 240, 240);">
+      <div style="font-weight: 400; letter-spacing: 5px; margin: 5px 0;">PRAMOD DEVIREDDY</div>
+      <div style="font-size: 16px; color: rgb(245, 245, 245);">
         Scientist/Engineer - SC,
         <b>ISRO</b>🚀
-        (2016 -
-        present)
       </div>
       <div style="font-size: 16px;">Spacecraft Checkout Engineer & Full Stack Developer</div>
+      <div style="font-size: 16px; color: rgb(245, 245, 245);">(2016 - present)</div>
       <v-btn class="ma-2" href="Pramod-Devireddy-CV.pdf" color="success">
         DOWNLOAD CV
         <v-icon right>mdi-download</v-icon>

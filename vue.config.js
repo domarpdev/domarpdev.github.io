@@ -6,5 +6,7 @@ module.exports = {
   pwa: {
     name: 'Pramod Devireddy',
     themeColor: '#4C8BF4'
-  }
+  },
+
+  publicPath: './'
 }

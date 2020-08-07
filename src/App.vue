@@ -1,17 +1,21 @@
 <template>
   <v-app>
-    <v-app-bar app flat color="#4C8BF4" dark>
-      <v-toolbar-title
-        style="margin-left: 5%; font-weight: 300; font-size: x-large; letter-spacing: 1px;"
-      >
-        <h1 class="hero">Pramod Devireddy</h1>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <div>
-        <v-chip class="ma-2" outlined link>Skills</v-chip>
-        <v-chip class="ma-2" outlined link>Projects</v-chip>
-        <v-chip class="ma-2" outlined link>Contact</v-chip>
-      </div>
+    <v-app-bar app flat color="#4C8BF4" :height="$vuetify.breakpoint.smAndUp ? none : 100" dark>
+      <v-row :no-gutters="$vuetify.breakpoint.smAndDown">
+        <v-col :cols="12" :sm="6">
+          <h1
+            class="hero"
+            :class="$vuetify.breakpoint.smAndUp ? 'text-left ml-10' : 'text-center mt-5'"
+          >Pramod Devireddy</h1>
+        </v-col>
+        <v-col :class="$vuetify.breakpoint.smAndUp ? 'text-right mr-10' : 'text-center'">
+          <div>
+            <v-chip class="ma-2" outlined link>Skills</v-chip>
+            <v-chip class="ma-2" outlined link>Projects</v-chip>
+            <v-chip class="ma-2" outlined link>Contact</v-chip>
+          </div>
+        </v-col>
+      </v-row>
     </v-app-bar>
 
     <v-main>
@@ -19,14 +23,18 @@
     </v-main>
 
     <v-footer app absolute>
-      <v-row>
-        <v-col></v-col>
-        <v-col class="text-center">
+      <v-row :no-gutters="$vuetify.breakpoint.mdAndDown">
+        <v-col :cols="4"></v-col>
+        <v-col :cols="12" :md="4" class="text-center">
           <span
             style="font-size: 16px; font-weight: 300; letter-spacing: 1px; line-height: 36px;"
           >&copy; 2020 - Present Pramod Devireddy</span>
         </v-col>
-        <v-col class="text-right">
+        <v-col
+          :cols="12"
+          :md="4"
+          :class="$vuetify.breakpoint.mdAndUp ? 'text-right' : 'text-center'"
+        >
           <v-btn
             class="mx-2"
             icon
@@ -94,9 +102,29 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .hero {
   font-size: 24px;
   font-weight: 400;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  margin: 0 3px;
+  padding: 0 3px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: #5b95f8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4387fd;
 }
 </style>
