@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app flat color="#4C8BF4" :height="$vuetify.breakpoint.smAndUp ? none : 100" dark>
+    <v-app-bar app flat color="#4C8BF4" :height="$vuetify.breakpoint.smAndUp ? 75 : 100" dark>
       <v-row :no-gutters="$vuetify.breakpoint.smAndDown">
         <v-col :cols="12" :sm="6">
           <h1
@@ -19,7 +19,7 @@
     </v-app-bar>
 
     <v-main>
-      <Home />
+      <Nuxt />
     </v-main>
 
     <v-footer app absolute>
@@ -28,7 +28,7 @@
         <v-col :cols="12" :md="4" class="text-center">
           <span
             style="font-size: 16px; font-weight: 300; letter-spacing: 1px; line-height: 36px;"
-          >&copy; 2020 - Present Pramod Devireddy</span>
+          >&copy; {{ new Date().getFullYear() }} - Pramod Devireddy</span>
         </v-col>
         <v-col
           :cols="12"
@@ -36,7 +36,7 @@
           :class="$vuetify.breakpoint.mdAndUp ? 'text-right' : 'text-center'"
         >
           <v-btn
-            class="mx-2"
+            class="mx-1"
             icon
             color="#DA5B50"
             target="_blank"
@@ -45,25 +45,25 @@
             <v-icon>mdi-gmail</v-icon>
           </v-btn>
           <v-btn
-            class="mx-2"
+            class="mx-1"
             icon
             color="#0077BF"
             target="_blank"
             href="https://www.linkedin.com/in/pramod-devireddy/"
           >
-            <v-icon>mdi-linkedin-box</v-icon>
+            <v-icon>mdi-linkedin</v-icon>
           </v-btn>
           <v-btn
-            class="mx-2"
+            class="mx-1"
             icon
             color="black"
             target="_blank"
             href="https://github.com/Pramod-Devireddy"
           >
-            <v-icon>mdi-github-circle</v-icon>
+            <v-icon>mdi-github</v-icon>
           </v-btn>
           <v-btn
-            class="mx-2"
+            class="mx-1"
             icon
             color="#1A91DA"
             target="_blank"
@@ -72,7 +72,7 @@
             <v-icon>mdi-twitter</v-icon>
           </v-btn>
           <v-btn
-            class="mx-2"
+            class="mx-1"
             icon
             color="black"
             target="_blank"
@@ -87,19 +87,8 @@
 </template>
 
 <script>
-import Home from "@/views/Home";
-
 export default {
-  name: "App",
-
-  components: {
-    Home,
-  },
-
-  data: () => ({
-    //
-  }),
-};
+}
 </script>
 
 <style>
