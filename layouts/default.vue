@@ -3,16 +3,16 @@
     <v-app-bar app flat color="#4C8BF4" :height="$vuetify.breakpoint.smAndUp ? 75 : 100" dark>
       <v-row :no-gutters="$vuetify.breakpoint.smAndDown">
         <v-col :cols="12" :sm="6">
-          <h1
-            class="hero"
-            :class="$vuetify.breakpoint.smAndUp ? 'text-left ml-10' : 'text-center mt-5'"
-          >Pramod Devireddy</h1>
+          <h1 :class="$vuetify.breakpoint.smAndUp ? 'text-left ml-10' : 'text-center mt-5'">
+            <nuxt-link to="/" class="hero">Pramod Devireddy</nuxt-link>
+          </h1>
         </v-col>
-        <v-col :class="$vuetify.breakpoint.smAndUp ? 'text-right mr-10' : 'text-center'">
+        <v-col :class="$vuetify.breakpoint.smAndUp ? 'text-right mr-5' : 'text-center'">
           <div>
-            <v-chip class="ma-2" outlined link>Skills</v-chip>
-            <v-chip class="ma-2" outlined link>Projects</v-chip>
-            <v-chip class="ma-2" outlined link>Contact</v-chip>
+            <v-chip class="ma-1" outlined link>Skills</v-chip>
+            <v-chip class="ma-1" outlined link>Projects</v-chip>
+            <v-chip class="ma-1" outlined link :to="'/blog'">Blog</v-chip>
+            <v-chip class="ma-1" outlined link>Contact</v-chip>
           </div>
         </v-col>
       </v-row>
@@ -87,14 +87,16 @@
 </template>
 
 <script>
-export default {
-}
+export default {};
 </script>
 
 <style>
 .hero {
   font-size: 24px;
   font-weight: 400;
+  color: white !important;
+  text-decoration: none;
+  outline: none;
 }
 
 ::-webkit-scrollbar {

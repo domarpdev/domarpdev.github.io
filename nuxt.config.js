@@ -110,12 +110,12 @@ export default {
       description: "Personal Portfolio Website",
       icons: [
         {
-          src: "static/icon.png",
+          src: "icon.png",
           sizes: "360x360",
           type: "image/png"
         }
       ],
-      start_url: ".",
+      start_url: "../",
       display: "standalone",
       background_color: "#ffffff",
       theme_color: "#4C8BF4",
@@ -132,7 +132,13 @@ export default {
    ** Content module configuration
    ** See https://content.nuxtjs.org/configuration
    */
-  content: {},
+  content: {
+    markdown: {
+      prism: {
+        theme: "prism-themes/themes/prism-material-oceanic.css"
+      }
+    }
+  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module

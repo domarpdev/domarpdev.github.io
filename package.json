@@ -9,7 +9,7 @@
   },
   "description": "Scientist/Engineer @ ISRO || Spacecraft Checkout Engineer || Full Stack Developer",
   "scripts": {
-    "dev": "nuxt --hostname 192.168.1.101 --port 3000",
+    "dev": "nuxt --hostname 192.168.1.100 --port 3000",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
@@ -18,7 +18,8 @@
     "@nuxt/content": "^1.5.0",
     "@nuxtjs/axios": "^5.12.0",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
-    "nuxt": "^2.14.0"
+    "nuxt": "^2.14.0",
+    "prism-themes": "^1.4.0"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.2"
