@@ -1,18 +1,18 @@
 <template>
   <v-app>
-    <v-app-bar app flat color="#4C8BF4" :height="$vuetify.breakpoint.smAndUp ? 75 : 100" dark>
+    <v-app-bar app flat :color="appBarColor" :height="$vuetify.breakpoint.smAndUp ? 75 : 100" dark>
       <v-row :no-gutters="$vuetify.breakpoint.smAndDown">
         <v-col :cols="12" :sm="6">
           <h1 :class="$vuetify.breakpoint.smAndUp ? 'text-left ml-10' : 'text-center mt-5'">
-            <nuxt-link to="/" class="hero">Pramod Devireddy</nuxt-link>
+            <nuxt-link to="/" class="hero" :style="{color: appTitleColor}">Pramod Devireddy</nuxt-link>
           </h1>
         </v-col>
-        <v-col :class="$vuetify.breakpoint.smAndUp ? 'text-right mr-5' : 'text-center'">
+        <v-col :class="$vuetify.breakpoint.smAndUp ? 'text-right mr-5' : 'text-center mb-5'">
           <div>
-            <v-chip class="ma-1" outlined link>Skills</v-chip>
-            <v-chip class="ma-1" outlined link>Projects</v-chip>
-            <v-chip class="ma-1" outlined link :to="'/blog'">Blog</v-chip>
-            <v-chip class="ma-1" outlined link>Contact</v-chip>
+            <v-chip :class="$vuetify.breakpoint.smAndDown ? 'my-2': 'ma-2'" color="#4C8BF4" link>Skills</v-chip>
+            <v-chip :class="$vuetify.breakpoint.smAndDown ? 'my-2': 'ma-2'" color="#4C8BF4" link>Projects</v-chip>
+            <v-chip :class="$vuetify.breakpoint.smAndDown ? 'my-2': 'ma-2'" color="#4C8BF4" :to="'/blog'">Blog</v-chip>
+            <v-chip :class="$vuetify.breakpoint.smAndDown ? 'my-2': 'ma-2'" color="#4C8BF4" link>Contact</v-chip>
           </div>
         </v-col>
       </v-row>
@@ -28,7 +28,7 @@
         <v-col :cols="12" :md="4" class="text-center">
           <span
             style="font-size: 16px; font-weight: 300; letter-spacing: 1px; line-height: 36px;"
-          >&copy; {{ new Date().getFullYear() }} - Pramod Devireddy</span>
+          >&copy; {{ new Date().getFullYear() }}  Pramod Devireddy</span>
         </v-col>
         <v-col
           :cols="12"
@@ -87,14 +87,19 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+
+export default {
+  computed: {
+    ...mapState(["appBarColor", "appTitleColor"]),
+  },
+};
 </script>
 
 <style>
 .hero {
   font-size: 24px;
   font-weight: 400;
-  color: white !important;
   text-decoration: none;
   outline: none;
 }
@@ -112,6 +117,7 @@ export default {};
 
 ::-webkit-scrollbar-thumb {
   border-radius: 6px;
+  border: 2px solid rgb(231, 231, 231);
   background-color: #5b95f8;
 }
 

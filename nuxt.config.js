@@ -19,7 +19,6 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: "Pramod Devireddy",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -29,12 +28,6 @@ export default {
         content: "PramodDevireddy"
       },
       { hid: "og:type", property: "og:type", content: "website" },
-      {
-        hid: "og:description",
-        property: "og:description",
-        content:
-          "Scientist/Engineer @ ISRO || Spacecraft Checkout Engineer || Full Stack Developer"
-      },
       {
         hid: "twitter:site",
         name: "twitter:site",
@@ -58,17 +51,12 @@ export default {
       {
         hid: "og:image:alt",
         property: "og:image:alt",
-        content: "PramodDevireddy"
+        content: "Pramod Devireddy"
       },
       {
         hid: "twitter:image",
         name: "twitter:image",
         content: "https://domarpdev.github.io/icon.png"
-      },
-      {
-        hid: "description",
-        name: "description",
-        content: process.env.npm_package_description || ""
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "icon.png" }]
@@ -139,6 +127,8 @@ export default {
       }
     }
   },
+
+  loading: { color: '#4C8BF4' },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module

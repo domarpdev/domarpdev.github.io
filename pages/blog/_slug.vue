@@ -2,7 +2,7 @@
   <div class="article-container">
     <h1>{{post.title}}</h1>
     <p>{{post.description}}</p>
-    <img :src="post.img" :alt="post.alt" />
+    <!-- <img :src="post.img" :alt="post.alt" /> -->
     <p>post last updated: {{ formatDate(post.updatedAt) }}</p>
     <nuxt-content :document="post" />
     <nav>
@@ -31,55 +31,39 @@ export default {
     },
   },
 
-  computed: {
-    head() {
-      return {
-        title: this.post.title,
-        titleTemplate: "%s - Pramod Devireddy",
-        meta: [
-          {
-            hid: "description",
-            name: "description",
-            content: this.post.description,
-          },
-          // Open Graph
-          { hid: "og:title", property: "og:title", content: this.post.title },
-          {
-            hid: "og:description",
-            property: "og:description",
-            content: this.post.description,
-          },
-          { hid: "og:type", property: "og:type", content: "article" },
-          {
-            hid: "og:url",
-            property: "og:url",
-            content: `https://domarpdev.github.io/blog/${this.post.slug}`,
-          },
-          { hid: "og:image", property: "og:image", content: this.socialImage },
-          // Twitter Card
-          {
-            hid: "twitter:title",
-            name: "twitter:title",
-            content: this.post.title,
-          },
-          {
-            hid: "twitter:description",
-            name: "twitter:description",
-            content: this.post.description,
-          },
-          {
-            hid: "twitter:image",
-            name: "twitter:image",
-            content: this.socialImage,
-          },
-          {
-            hid: "twitter:image:",
-            name: "twitter:image:alt",
-            content: this.post.imgUrl ? "Blog post image" : "Pramod Devireddy",
-          },
-        ],
-      };
-    },
+  head() {
+    console.log(this.post);
+    return {
+      title: this.post.title,
+      titleTemplate: "%s - Pramod Devireddy",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.post.description,
+        },
+        // Open Graph
+        { hid: "og:title", property: "og:title", content: this.post.title },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: this.post.description,
+        },
+        { hid: "og:type", property: "og:type", content: "article" },
+
+        // Twitter Card
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: this.post.title,
+        },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          content: this.post.description,
+        },
+      ],
+    };
   },
 };
 </script>
@@ -111,8 +95,7 @@ export default {
   background-size: 20px 20px;
 }
 
-
 .v-application code {
-    background-color: transparent;
+  background-color: transparent;
 }
 </style>
