@@ -1,19 +1,23 @@
 <template>
   <v-app>
     <v-app-bar app flat :color="appBarColor" :height="$vuetify.breakpoint.smAndUp ? 75 : 100" dark>
-      <v-row :no-gutters="$vuetify.breakpoint.smAndDown">
-        <v-col :cols="12" :sm="6">
+      <v-row align="center" :no-gutters="$vuetify.breakpoint.smAndDown">
+        <v-col :cols="12" :md="6" :sm="6" :xs="12">
           <h1 :class="$vuetify.breakpoint.smAndUp ? 'text-left ml-10' : 'text-center mt-5'">
             <nuxt-link to="/" class="hero" :style="{color: appTitleColor}">Pramod Devireddy</nuxt-link>
           </h1>
         </v-col>
-        <v-col :class="$vuetify.breakpoint.smAndUp ? 'text-right mr-5' : 'text-center mb-5'">
-          <div>
-            <v-chip :class="$vuetify.breakpoint.smAndDown ? 'my-2': 'ma-2'" color="#4C8BF4" link>Skills</v-chip>
-            <v-chip :class="$vuetify.breakpoint.smAndDown ? 'my-2': 'ma-2'" color="#4C8BF4" link>Projects</v-chip>
-            <v-chip :class="$vuetify.breakpoint.smAndDown ? 'my-2': 'ma-2'" color="#4C8BF4" :to="'/blog'">Blog</v-chip>
-            <v-chip :class="$vuetify.breakpoint.smAndDown ? 'my-2': 'ma-2'" color="#4C8BF4" link>Contact</v-chip>
-          </div>
+        <v-col
+          :cols="12"
+          :md="6"
+          :sm="6"
+          :xs="12"
+          :class="$vuetify.breakpoint.smAndUp ? 'text-right pr-10 pt-3' : 'text-center mb-5'"
+        >
+          <v-btn :color="appTitleColor" class="nav-button" text rounded>Skills</v-btn>
+          <v-btn :color="appTitleColor" class="nav-button" text rounded>Projects</v-btn>
+          <v-btn :color="appTitleColor" class="nav-button" text rounded :to="'/blog'">Blog</v-btn>
+          <v-btn :color="appTitleColor" class="nav-button" text rounded>Contact</v-btn>
         </v-col>
       </v-row>
     </v-app-bar>
@@ -28,7 +32,7 @@
         <v-col :cols="12" :md="4" class="text-center">
           <span
             style="font-size: 16px; font-weight: 300; letter-spacing: 1px; line-height: 36px;"
-          >&copy; {{ new Date().getFullYear() }}  Pramod Devireddy</span>
+          >&copy; {{ new Date().getFullYear() }} Pramod Devireddy</span>
         </v-col>
         <v-col
           :cols="12"
@@ -99,9 +103,17 @@ export default {
 <style>
 .hero {
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 300;
   text-decoration: none;
   outline: none;
+}
+
+.nav-button {
+  font-weight: 300 !important;
+  font-size: 16px !important;
+  text-transform: none;
+  padding: 0px 5px !important;
+  letter-spacing: 0px;
 }
 
 ::-webkit-scrollbar {

@@ -1,5 +1,5 @@
 <template>
- <div>
+  <div>
     <h1>Blog Posts</h1>
     <ul>
       <li v-for="post of posts" :key="post.slug">
@@ -33,8 +33,7 @@ export default {
   },
   data: () => ({
     title: "Blog - Pramod Devireddy",
-    description:
-      "Blog Posts by Pramod Devireddy",
+    description: "Blog Posts by Pramod Devireddy",
   }),
   head() {
     return {
@@ -70,10 +69,10 @@ export default {
       ],
     };
   },
-  created: function() {
-      this.$store.commit("SET_APP_BAR_COLOR", "#FFF")
-      this.$store.commit("SET_APP_TITLE_COLOR", "#4C8BF4")
-  }
+  created: function () {
+    this.$store.commit("SET_APP_BAR_COLOR", "#FFF");
+    this.$store.commit("SET_APP_TITLE_COLOR", "#000");
+  },
 };
 </script>
 

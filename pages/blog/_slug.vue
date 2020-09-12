@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
   name: "PageSlug",
   async asyncData({ $content, params }) {
@@ -65,6 +67,11 @@ export default {
       ],
     };
   },
+
+  created: function () {
+    this.$store.commit("SET_APP_BAR_COLOR", "#FFF");
+    this.$store.commit("SET_APP_TITLE_COLOR", "#000");
+  },
 };
 </script>
 
@@ -96,6 +103,55 @@ export default {
 }
 
 .v-application code {
-  background-color: transparent;
+  all: initial;
+  all: unset;
+}
+
+.nuxt-content-highlight {
+  font-family: Consolas;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+  border-radius: 6px;
+}
+
+.nuxt-content-highlight > .filename {
+  font-family: Roboto;
+  right: 0;
+  top: 0;
+  position: absolute;
+  margin-right: 0.8rem;
+  font-size: 0.8rem;
+  color: rgba(203, 213, 224, 1);
+  font-weight: 300;
+  z-index: 10;
+  margin-top: 0.5rem;
+}
+
+.nuxt-content pre {
+  position: static;
+  border-radius: 6px;
+  font-family: Consolas;
+  font-size: 16px;
+  padding: 20px;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  color: #c3cee3;
+  font-family: Consolas, Roboto Mono, monospace;
+  font-size: 1em;
+  line-height: 1.5em;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
 </style>

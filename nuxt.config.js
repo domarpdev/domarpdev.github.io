@@ -123,12 +123,12 @@ export default {
   content: {
     markdown: {
       prism: {
-        theme: "prism-themes/themes/prism-material-oceanic.css"
+        theme: "prism-themes/themes/prism-vsc-dark-plus.css"
       }
     }
   },
 
-  loading: { color: '#4C8BF4' },
+  loading: { color: "#4C8BF4" },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
