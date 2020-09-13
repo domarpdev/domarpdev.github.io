@@ -1,18 +1,17 @@
 <template>
   <div>
-    <h1>Blog Posts</h1>
-    <ul>
-      <li v-for="post of posts" :key="post.slug">
-        <NuxtLink :to="{ name: 'blog-slug', params: { slug: post.slug } }">
-          <img :src="post.img" />
-          <div>
-            <h2>{{ post.title }}</h2>
-            <p>by {{ post.author.name }}</p>
-            <p>{{ post.description }}</p>
-          </div>
+    <v-container>
+      <h1 class="blog-header">Blog Posts</h1>
+
+      <v-card v-for="post of posts" :key="post.slug" max-width="600">
+        <NuxtLink class="post-card" :to="{ name: 'blog-slug', params: { slug: post.slug } }">
+          <!-- <img :src="post.img" /> -->
+          <v-card-title>{{ post.title }}</v-card-title>
+          <v-card-subtitle>by {{ post.author.name }}</v-card-subtitle>
+          <v-card-subtitle>{{ post.description }}</v-card-subtitle>
         </NuxtLink>
-      </li>
-    </ul>
+      </v-card>
+    </v-container>
   </div>
 </template>
 
@@ -21,6 +20,7 @@ import { mapMutations } from "vuex";
 
 export default {
   name: "Blog",
+
   async asyncData({ $content, params }) {
     const posts = await $content("blog", params.slug)
       .only(["title", "description", "img", "slug", "author"])
@@ -31,10 +31,12 @@ export default {
       posts,
     };
   },
+
   data: () => ({
     title: "Blog - Pramod Devireddy",
     description: "Blog Posts by Pramod Devireddy",
   }),
+
   head() {
     return {
       title: this.title,
@@ -69,6 +71,7 @@ export default {
       ],
     };
   },
+
   created: function () {
     this.$store.commit("SET_APP_BAR_COLOR", "#FFF");
     this.$store.commit("SET_APP_TITLE_COLOR", "#000");
@@ -77,4 +80,13 @@ export default {
 </script>
 
 <style>
+.blog-header {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+.post-card {
+  text-decoration: none;
+}
 </style>

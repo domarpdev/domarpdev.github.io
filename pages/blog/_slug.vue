@@ -1,29 +1,46 @@
 <template>
-  <div class="article-container">
-    <h1>{{post.title}}</h1>
-    <p>{{post.description}}</p>
-    <!-- <img :src="post.img" :alt="post.alt" /> -->
-    <p>post last updated: {{ formatDate(post.updatedAt) }}</p>
-    <nuxt-content :document="post" />
-    <nav>
-      <ul>
-        <li v-for="link of post.toc" :key="link.id">
-          <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
-        </li>
-      </ul>
-    </nav>
-  </div>
+  <v-container>
+    <v-row justify="center">
+      <v-col lg="5" md="8" sm="10">
+        <h1 class="blog-title">{{post.title}}</h1>
+
+        <h4 class="blog-description">{{post.description}}</h4>
+
+        <div class="d-flex blog-details">
+          <div>
+            <v-avatar class="elevation-10" size="55">
+              <img src="pramod-devireddy.jpg" alt="Pramod Devireddy" />
+            </v-avatar>
+          </div>
+          <div class="ml-3 mt-2">
+            <div class="blog-author">Pramod Devireddy</div>
+            <div class="blog-time">
+              <span>{{ formatDate(post.updatedAt) }}</span> •
+              <ReadTime :content="post"></ReadTime>
+            </div>
+          </div>
+        </div>
+
+        <nuxt-content :document="post" />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
+import ReadTime from "@/components/ReadTime";
 import { mapMutations } from "vuex";
 
 export default {
   name: "PageSlug",
+
   async asyncData({ $content, params }) {
     const post = await $content("blog", params.slug).fetch();
-
     return { post };
+  },
+
+  components: {
+    ReadTime,
   },
 
   methods: {
@@ -75,31 +92,49 @@ export default {
 };
 </script>
 
+
 <style>
-.article-container {
-  margin: 10px 25px;
+.blog-title {
+  font-size: 48px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 600px) {
+  .blog-title {
+    font-size: 36px;
+  }
+}
+
+.blog-description {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.blog-details {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.blog-time {
+  font-size: 15px;
+  font-weight: 300;
 }
 
 .nuxt-content h2 {
-  font-weight: bold;
-  font-size: 28px;
+  font-weight: 500;
+  font-size: 30px;
 }
 
 .nuxt-content h3 {
-  font-weight: bold;
+  font-weight: 400;
   font-size: 22px;
 }
 
 .nuxt-content p {
+  font-size: 16px;
   margin-bottom: 20px;
-}
-
-.icon.icon-link {
-  background-image: url("~assets/svg/icon-hashtag.svg");
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-size: 20px 20px;
+  word-spacing: 3px;
+  line-height: 28px;
 }
 
 .v-application code {
@@ -109,7 +144,7 @@ export default {
 
 .nuxt-content-highlight {
   font-family: Consolas;
-  font-size: 14px;
+  font-size: 16px;
   position: relative;
   z-index: 1;
   border-radius: 6px;

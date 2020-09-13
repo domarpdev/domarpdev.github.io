@@ -1,6 +1,13 @@
 <template>
   <v-app>
-    <v-app-bar app flat :color="appBarColor" :height="$vuetify.breakpoint.smAndUp ? 75 : 100" dark>
+    <v-app-bar
+      app
+      flat
+      class="app-bar"
+      :color="appBarColor"
+      :height="$vuetify.breakpoint.smAndUp ? 75 : 100"
+      dark
+    >
       <v-row align="center" :no-gutters="$vuetify.breakpoint.smAndDown">
         <v-col :cols="12" :md="6" :sm="6" :xs="12">
           <h1 :class="$vuetify.breakpoint.smAndUp ? 'text-left ml-10' : 'text-center mt-5'">
@@ -101,6 +108,10 @@ export default {
 </script>
 
 <style>
+.app-bar {
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
 .hero {
   font-size: 24px;
   font-weight: 300;
