@@ -9,7 +9,7 @@
         <div class="d-flex blog-details">
           <div>
             <v-avatar class="elevation-10" size="55">
-              <img src="pramod-devireddy.jpg" alt="Pramod Devireddy" />
+              <img src="pramod-devireddy-96x96.jpg" alt="Pramod Devireddy" />
             </v-avatar>
           </div>
           <div class="ml-3 mt-2">
