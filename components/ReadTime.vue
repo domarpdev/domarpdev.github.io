@@ -1,19 +1,19 @@
 /*
  * File         : ReadTime.vue
- * Project      : HEATWAVE
+ * Project      : Portfolio
  * Created Date : Sunday, Sep 13th 2020, 5:16:20 PM
  * Author       : Pramod Devireddy
  * 
- * Last Modified: Sunday, 13th September 2020 5:21:47 pm
+ * Last Modified: Saturday, 26th September 2020 9:07:00 pm
  * Modified By  : Pramod Devireddy
  * 
- * Copyright (c)2020 - IMACS SCG-URSC/ISRO
+ * Copyright (c)2020 - Pramod Devireddy
  * ***************************************************************
  */
 
 
 <template>
-  <span>{{readTime}} min read</span>
+  <span>{{ readTime }} min read</span>
 </template>
 
 <script>

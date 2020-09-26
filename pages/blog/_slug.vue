@@ -180,12 +180,12 @@ export default {
         {
           hid: "og:image",
           property: "og:image",
-          content: this.post.img,
+          content: "https://domarpdev.github.io/" + this.post.img,
         },
         {
           hid: "og:image:secure_url",
           property: "og:image:secure_url",
-          content: this.post.img,
+          content: "https://domarpdev.github.io/" + this.post.img,
         },
         {
           hid: "og:image:alt",
@@ -195,7 +195,7 @@ export default {
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: this.post.img,
+          content: "https://domarpdev.github.io/" + this.post.img,
         },
       ],
     };
@@ -247,6 +247,9 @@ export default {
 .nuxt-content h2 {
   font-weight: 500;
   font-size: 30px;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #eaecef;
+  margin-bottom: 1rem;
 }
 
 .nuxt-content h3 {
@@ -261,9 +264,39 @@ export default {
   line-height: 32px;
 }
 
+.nuxt-content p code,
+.nuxt-content h2 code,
+.nuxt-content h3 code {
+  color: #476582;
+  padding: 0.25rem 0.5rem;
+  margin: 0;
+  font-size: 0.85em;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+  font-family: Consolas, Roboto Mono, monospace;
+}
+
+.nuxt-content ul {
+  font-size: 16px;
+  margin-bottom: 30px;
+  word-spacing: 2px;
+  line-height: 32px;
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
 .v-application code {
   all: initial;
   all: unset;
+}
+
+.v-application a {
+  text-decoration: none;
 }
 
 .nuxt-content-highlight {
@@ -297,6 +330,7 @@ export default {
 
 code[class*="language-"],
 pre[class*="language-"] {
+  font-size: 16px;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
