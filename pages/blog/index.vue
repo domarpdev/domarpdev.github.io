@@ -3,14 +3,28 @@
     <v-container>
       <h1 class="blog-header">Blog Posts</h1>
 
-      <v-card v-for="post of posts" :key="post.slug" max-width="600">
-        <NuxtLink class="post-card" :to="{ name: 'blog-slug', params: { slug: post.slug } }">
-          <!-- <img :src="post.img" /> -->
-          <v-card-title>{{ post.title }}</v-card-title>
-          <v-card-subtitle>by {{ post.author.name }}</v-card-subtitle>
-          <v-card-subtitle>{{ post.description }}</v-card-subtitle>
-        </NuxtLink>
-      </v-card>
+      <div class="d-flex flex-wrap justify-center">
+        <v-card
+          class="ma-5"
+          elevation="3"
+          v-for="post of posts"
+          :key="post.slug"
+          width="500"
+        >
+          <NuxtLink
+            class="post-card"
+            :to="{ name: 'blog-slug', params: { slug: post.slug } }"
+          >
+            <v-img :src="post.img" contain> </v-img>
+            <v-card-title>{{ post.title }}</v-card-title>
+            <v-card-subtitle>by {{ post.author.name }}</v-card-subtitle>
+            <v-card-subtitle class="pt-0 pb-3">{{
+              post.description
+            }}</v-card-subtitle>
+            <div class="read-more ml-4 mb-3">Read More ...</div>
+          </NuxtLink>
+        </v-card>
+      </div>
     </v-container>
   </div>
 </template>
@@ -88,5 +102,9 @@ export default {
 }
 .post-card {
   text-decoration: none;
+}
+
+.read-more {
+  color: rgb(92, 148, 252);
 }
 </style>

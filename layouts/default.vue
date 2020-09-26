@@ -10,8 +10,16 @@
     >
       <v-row align="center" :no-gutters="$vuetify.breakpoint.smAndDown">
         <v-col :cols="12" :md="6" :sm="6" :xs="12">
-          <h1 :class="$vuetify.breakpoint.smAndUp ? 'text-left ml-10' : 'text-center mt-5'">
-            <nuxt-link to="/" class="hero" :style="{color: appTitleColor}">Pramod Devireddy</nuxt-link>
+          <h1
+            :class="
+              $vuetify.breakpoint.smAndUp
+                ? 'text-left ml-10'
+                : 'text-center mt-5'
+            "
+          >
+            <nuxt-link to="/" class="hero" :style="{ color: appTitleColor }"
+              >Pramod Devireddy</nuxt-link
+            >
           </h1>
         </v-col>
         <v-col
@@ -19,12 +27,29 @@
           :md="6"
           :sm="6"
           :xs="12"
-          :class="$vuetify.breakpoint.smAndUp ? 'text-right pr-10 pt-3' : 'text-center mb-5'"
+          :class="
+            $vuetify.breakpoint.smAndUp
+              ? 'text-right pr-10 pt-3'
+              : 'text-center mb-5'
+          "
         >
-          <v-btn :color="appTitleColor" class="nav-button" text rounded>Skills</v-btn>
-          <v-btn :color="appTitleColor" class="nav-button" text rounded>Projects</v-btn>
-          <v-btn :color="appTitleColor" class="nav-button" text rounded :to="'/blog'">Blog</v-btn>
-          <v-btn :color="appTitleColor" class="nav-button" text rounded>Contact</v-btn>
+          <v-btn :color="appTitleColor" class="nav-button" text rounded
+            >Skills</v-btn
+          >
+          <v-btn :color="appTitleColor" class="nav-button" text rounded
+            >Projects</v-btn
+          >
+          <v-btn
+            :color="appTitleColor"
+            class="nav-button"
+            text
+            rounded
+            :to="'/blog'"
+            >Blog</v-btn
+          >
+          <v-btn :color="appTitleColor" class="nav-button" text rounded
+            >Contact</v-btn
+          >
         </v-col>
       </v-row>
     </v-app-bar>
@@ -38,8 +63,14 @@
         <v-col :cols="4"></v-col>
         <v-col :cols="12" :md="4" class="text-center">
           <span
-            style="font-size: 16px; font-weight: 300; letter-spacing: 1px; line-height: 36px;"
-          >&copy; {{ new Date().getFullYear() }} Pramod Devireddy</span>
+            style="
+              font-size: 16px;
+              font-weight: 300;
+              letter-spacing: 1px;
+              line-height: 36px;
+            "
+            >&copy; {{ new Date().getFullYear() }} Pramod Devireddy</span
+          >
         </v-col>
         <v-col
           :cols="12"
@@ -129,6 +160,7 @@ export default {
 
 ::-webkit-scrollbar {
   width: 12px;
+  height: 10px;
   margin: 0 3px;
   padding: 0 3px;
 }
@@ -141,10 +173,10 @@ export default {
 ::-webkit-scrollbar-thumb {
   border-radius: 6px;
   border: 2px solid rgb(231, 231, 231);
-  background-color: #5b95f8;
+  background-color: #a8a8a8;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #4387fd;
+  background-color: #a8a8a8;
 }
 </style>

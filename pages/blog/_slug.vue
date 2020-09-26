@@ -1,17 +1,21 @@
 <template>
-  <v-container>
+  <v-container class="mb-15">
     <v-row justify="center">
-      <v-col lg="5" md="8" sm="10">
+      <v-col xl="5" lg="7" md="10" sm="10">
+        <div class="mb-5">
+          <NuxtLink :to="`/blog`" class="blog-list-link">
+            <v-icon>mdi-arrow-left</v-icon> &nbsp; Blog List
+          </NuxtLink>
+        </div>
+
         <h1 class="blog-title">{{ post.title }}</h1>
-
         <h4 class="blog-description">{{ post.description }}</h4>
-
         <div class="d-flex flex-wrap blog-details">
           <v-avatar class="elevation-10" size="55">
             <img src="pramod-devireddy-96x96.jpg" alt="Pramod Devireddy" />
           </v-avatar>
           <div class="ml-3 mt-1">
-            <div class="blog-author">Pramod Devireddy</div>
+            <div class="blog-author">{{ post.author.name }}</div>
             <div class="blog-time">
               <span>{{ formatDate(post.updatedAt) }}</span> •
               <ReadTime :content="post"></ReadTime>
@@ -22,7 +26,13 @@
             <v-btn icon color="#757575" target="_blank" @click="tweet()">
               <v-icon>mdi-twitter</v-icon>
             </v-btn>
-            <v-btn class="mx-n1" icon color="#757575" target="_blank" @click="linkedInPost()">
+            <v-btn
+              class="mx-n1"
+              icon
+              color="#757575"
+              target="_blank"
+              @click="linkedInPost()"
+            >
               <v-icon>mdi-linkedin</v-icon>
             </v-btn>
             <v-btn icon color="#757575" target="_blank" @click="facebookPost()">
@@ -31,7 +41,13 @@
           </div>
         </div>
 
+        <v-card class="mb-10" elevation="3">
+          <v-img :src="post.img" class="grey lighten-2"> </v-img>
+        </v-card>
+
         <nuxt-content :document="post" />
+
+        <PrevNextBlog :prev="prev" :next="next" />
       </v-col>
     </v-row>
   </v-container>
@@ -39,6 +55,7 @@
 
 <script>
 import ReadTime from "@/components/ReadTime";
+import PrevNextBlog from "@/components/PrevNextBlog";
 import { mapMutations } from "vuex";
 
 export default {
@@ -46,11 +63,18 @@ export default {
 
   async asyncData({ $content, params }) {
     const post = await $content("blog", params.slug).fetch();
-    return { post };
+    const [prev, next] = await $content("blog")
+      .only(["title", "slug"])
+      .sortBy("createdAt", "asc")
+      .surround(params.slug)
+      .fetch();
+
+    return { post, prev, next };
   },
 
   components: {
     ReadTime,
+    PrevNextBlog,
   },
 
   methods: {
@@ -123,7 +147,6 @@ export default {
   },
 
   head() {
-    console.log(this.post);
     return {
       title: this.post.title,
       titleTemplate: "%s - Pramod Devireddy",
@@ -153,6 +176,27 @@ export default {
           name: "twitter:description",
           content: this.post.description,
         },
+
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.post.img,
+        },
+        {
+          hid: "og:image:secure_url",
+          property: "og:image:secure_url",
+          content: this.post.img,
+        },
+        {
+          hid: "og:image:alt",
+          property: "og:image:alt",
+          content: this.post.title,
+        },
+        {
+          hid: "twitter:image",
+          name: "twitter:image",
+          content: this.post.img,
+        },
       ],
     };
   },
@@ -165,6 +209,15 @@ export default {
 </script>
 
 <style>
+.blog-list-link {
+  text-decoration: none;
+  color: #000 !important;
+}
+
+.blog-list-link:hover {
+  color: rgb(92, 148, 252) !important;
+}
+
 .blog-title {
   font-size: 48px;
   font-weight: 400;
@@ -259,5 +312,6 @@ pre[class*="language-"] {
   -webkit-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  margin-bottom: 15px;
 }
 </style>
