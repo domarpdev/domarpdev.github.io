@@ -4,21 +4,29 @@
       <v-avatar class="elevation-20" size="150">
         <img src="pramod-devireddy-200x200.jpg" alt="Pramod Devireddy" />
       </v-avatar>
-      <div style="font-weight: 400; letter-spacing: 5px; margin: 5px 0;">PRAMOD DEVIREDDY</div>
-      <div style="font-size: 16px; color: rgb(245, 245, 245);">
-        Scientist/Engineer - SC,
+      <div style="font-weight: 400; letter-spacing: 5px; margin: 5px 0">
+        PRAMOD DEVIREDDY
+      </div>
+      <div style="font-size: 16px; color: rgb(245, 245, 245)">
+        Scientist/Engineer - SD,
         <b>ISRO</b>🚀
       </div>
-      <div style="font-size: 16px;">Spacecraft Checkout Engineer & Full Stack Developer</div>
-      <div style="font-size: 16px; color: rgb(245, 245, 245);">(2016 - present)</div>
+      <div style="font-size: 16px">
+        Spacecraft Checkout Engineer & Full Stack Developer
+      </div>
+      <div style="font-size: 16px; color: rgb(245, 245, 245)">
+        (2016 - present)
+      </div>
       <v-btn class="ma-2" href="Pramod-Devireddy-CV.pdf" color="success">
         DOWNLOAD CV
         <v-icon right>mdi-download</v-icon>
       </v-btn>
     </div>
 
-    <div align="center" style="margin: 30px 15%;">
-      <div style="letter-spacing: 2px; font-weight: 500; margin: 10px 0;">SKILLS</div>
+    <div align="center" style="margin: 30px 15%">
+      <div style="letter-spacing: 2px; font-weight: 500; margin: 10px 0">
+        SKILLS
+      </div>
       <v-chip class="ma-2">C</v-chip>
       <v-chip class="ma-2">C++</v-chip>
       <v-chip class="ma-2">Matlab</v-chip>
