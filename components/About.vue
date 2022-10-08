@@ -12,7 +12,7 @@
         <b>ISRO</b>🚀
       </div>
       <div style="font-size: 16px">
-        Spacecraft Checkout Engineer & Full Stack Developer
+        Spacecraft Mission & Checkout Software Developer
       </div>
       <div style="font-size: 16px; color: rgb(245, 245, 245)">
         (2016 - present)
@@ -29,16 +29,17 @@
       </div>
       <v-chip class="ma-2">C</v-chip>
       <v-chip class="ma-2">C++</v-chip>
+      <v-chip class="ma-2">Go</v-chip>
+      <v-chip class="ma-2">Qt</v-chip>
       <v-chip class="ma-2">Matlab</v-chip>
       <v-chip class="ma-2">Python</v-chip>
-      <v-chip class="ma-2">Qt</v-chip>
       <v-chip class="ma-2">MySQL</v-chip>
       <v-chip class="ma-2">HTML</v-chip>
       <v-chip class="ma-2">CSS</v-chip>
       <v-chip class="ma-2">JavaScript</v-chip>
       <v-chip class="ma-2">PHP</v-chip>
-      <v-chip class="ma-2">golang</v-chip>
       <v-chip class="ma-2">Vue JS</v-chip>
+      <v-chip class="ma-2">Nuxt JS</v-chip>
       <v-chip class="ma-2">Photoshop</v-chip>
       <v-chip class="ma-2">Premiere Pro</v-chip>
       <v-chip class="ma-2">After Effects</v-chip>
