@@ -2,7 +2,7 @@
   <div>
     <div class="profile elevation-5" align="center">
       <v-avatar class="elevation-20" size="150">
-        <img src="pramod-devireddy-200x200.jpg" alt="Pramod Devireddy" />
+        <img src="pramod-devireddy1-200x200.jpg" alt="Pramod Devireddy" />
       </v-avatar>
       <div style="font-weight: 400; letter-spacing: 5px; margin: 5px 0">
         PRAMOD DEVIREDDY
