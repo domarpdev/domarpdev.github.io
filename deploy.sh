@@ -1,5 +1,5 @@
 cd deploy
-rm -r *
+rm -rf *
 cd ..
 
 cp -r dist/* deploy/
