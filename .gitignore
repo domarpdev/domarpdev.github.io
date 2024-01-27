@@ -38,6 +38,7 @@ deploy/
 # Dependency directories
 node_modules/
 jspm_packages/
+_nuxt/
 
 # TypeScript v1 declaration files
 typings/
