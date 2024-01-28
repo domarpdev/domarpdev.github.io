@@ -1,7 +1,7 @@
 ---
 title: Create Medium Style Blog Theme with Nuxt JS
 description: In this blog post, with the power of Nuxt Content module and using the awesome Vuetify, we create a Medium-Styled blog site.
-img: blog/medium-style-blog-theme.jpg
+img: /blog/medium-style-blog-theme.jpg
 alt: Medium Style Blog Theme
 author:
   name: Pramod Devireddy
