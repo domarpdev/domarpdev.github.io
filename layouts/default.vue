@@ -1,5 +1,4 @@
 <template>
-
   <v-app>
 
     <v-app-bar app flat class="app-bar" :color="appBarColor" :height="$vuetify.breakpoint.smAndUp ? 75 : 100" dark>
@@ -8,11 +7,10 @@
 
         <v-col :cols="12" :md="6" :sm="6" :xs="12">
 
-          <h1 :class="
-            $vuetify.breakpoint.smAndUp
+          <h1 :class="$vuetify.breakpoint.smAndUp
               ? 'text-left ml-10'
               : 'text-center mt-5'
-          ">
+            ">
 
             <nuxt-link to="/" class="hero" :style="{ color: appTitleColor }">
               Pramod Devireddy
@@ -22,11 +20,10 @@
 
         </v-col>
 
-        <v-col :cols="12" :md="6" :sm="6" :xs="12" :class="
-          $vuetify.breakpoint.smAndUp
+        <v-col :cols="12" :md="6" :sm="6" :xs="12" :class="$vuetify.breakpoint.smAndUp
             ? 'text-right pr-10 pt-3'
             : 'text-center mb-5'
-        ">
+          ">
 
           <v-btn :color="appTitleColor" class="nav-button" text rounded>
             Skills
@@ -70,7 +67,7 @@
               letter-spacing: 1px;
               line-height: 36px;
             ">
-            &copy; {{ new Date().getFullYear() }} Pramod Devireddy
+            Copyright &copy; {{ new Date().getFullYear() }} Pramod Devireddy. Make your own Magic!
           </span>
 
         </v-col>
@@ -114,7 +111,6 @@
     </v-footer>
 
   </v-app>
-
 </template>
 
 <script>
