@@ -8,7 +8,7 @@
         PRAMOD DEVIREDDY
       </div>
       <div style="font-size: 16px; color: rgb(245, 245, 245)">
-        Scientist/Engineer - SD,
+        Scientist/Engineer - SE,
         <b>ISRO</b>🚀
       </div>
       <div style="font-size: 16px">
